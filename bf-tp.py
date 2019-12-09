@@ -79,6 +79,7 @@ def testTimeToCrackTheoric(cList, nbCharacters, pathHash):
         i = nbCharacters[0]
         while i < nbCharacters[1]: 
             for attempt in itertools.product(cList, repeat=i):
+                print(attempt)
                 solution = checkPass(attempt, d)
                 if solution != False:
                     realTime = time.time()-start
